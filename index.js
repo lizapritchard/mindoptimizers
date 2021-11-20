@@ -1,6 +1,11 @@
 var app = new Vue({
     el: '#app',
     data: {
-        username: "Ella"
+        username: ""
+    }, 
+    methods: {
+        setUsername(val) {
+            this.username = val; 
+        }
     }
 }); 
