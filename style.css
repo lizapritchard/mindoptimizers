@@ -16,3 +16,7 @@ h1 {
     margin: 2rem;
     height: 20rem;
 }
+
+ul {
+    list-style: none;
+}
