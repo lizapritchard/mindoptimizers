@@ -1,0 +1,29 @@
+/* TODO: figure out a better way to line these up  */
+.water-icon {
+    padding-left: 5px;
+    color: #2AAAE1;
+}
+
+.sun-icon {
+    color: #F9BA45; 
+}
+
+.moon-icon {
+    color: #8E01FF
+}
+
+#daily-goals i {
+    font-size: 2rem;
+    margin: 1rem;
+    width: 32px;
+}
+
+#daily-goals li {
+    display: flex;
+    align-items: center;
+}
+
+#daily-goals h2 {
+    padding: 1rem;
+    text-decoration: underline;
+}
