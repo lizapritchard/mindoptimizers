@@ -27,3 +27,9 @@
     padding: 1rem;
     text-decoration: underline;
 }
+
+.link-highlight {
+    font-weight: 700;
+    color: rgb(3, 138, 192);
+    text-decoration: none;
+}
