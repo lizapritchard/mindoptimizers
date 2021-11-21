@@ -7,6 +7,9 @@
 You can replace `yarn` with `npm run` here.
 
 ```bash
+# setup 
+npm install
+
 # build for production
 yarn build
 
