@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+      <intro-modal/>
       <h1>Good Morning, {{username}}</h1>
         <div class="container-fluid">
             <div class="row">
@@ -21,15 +22,22 @@
 </template>
 
 <script>
-  import DailyGoals from './DailyGoals.vue'
+  import DailyGoals from './DailyGoals.vue'; 
+  import IntroModal from './IntroModal.vue'; 
   export default {
     data () {
       return {
         username: null
       }
+    },
+    methods: {
+      setUsername(val) {
+          this.username = val; 
+      }
     }, 
     components: {
-      DailyGoals
+      DailyGoals, 
+      IntroModal
     }, 
     name: 'app', 
   }
