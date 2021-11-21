@@ -1,0 +1,73 @@
+<template>
+  <div id="app">
+      <h1>Good Morning, {{username}}</h1>
+        <div class="container-fluid">
+            <div class="row">
+                <section id="journal" class="col-5 white-box"></section>
+                <div class="col-3">
+                    <section class="row white-box"></section>
+                    <section class="row white-box"></section>
+                    <section class="row white-box"></section>
+                </div>
+                <div class="col-3">
+                    <section id="daily-goals" class="row white-box">
+                        <daily-goals/>
+                    </section>
+                    <section class="row white-box"></section>
+                </div>
+            </div>
+          </div>
+  </div>
+</template>
+
+<script>
+  import DailyGoals from './DailyGoals.vue'
+  export default {
+    data () {
+      return {
+        username: null
+      }
+    }, 
+    components: {
+      DailyGoals
+    }, 
+    name: 'app', 
+  }
+</script>
+
+<!-- FONTS -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap');
+</style>
+
+<!-- Global CSS -->
+<style>
+  body {
+      background-image: url(../../static/cloud.jpeg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      font-family: 'Open Sans', sans-serif;
+  }
+  ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+  }
+</style>
+
+<!-- Scoped component css -->
+<!-- It only affect current component -->
+<style scoped>
+  h1 {
+      font-family: 'El Messiri', sans-serif;
+      margin: 2rem;
+      font-size: 5rem;
+  }
+
+  .white-box {
+      background-color: white;
+      border-radius: 10px;
+      margin: 2rem;
+      height: 20rem;
+  }
+</style>
