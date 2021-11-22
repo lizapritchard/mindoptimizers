@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './components/App.vue'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
+import { faMoon, faSun, faTint, faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 // Import Bootstrap an BootstrapVue CSS files (order is important)
@@ -16,7 +16,9 @@ Vue.use(IconsPlugin)
 
 
 // Font awesome stuff
-library.add(faUserSecret)
+library.add(faMoon)
+library.add(faSun)
+library.add(faTint)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

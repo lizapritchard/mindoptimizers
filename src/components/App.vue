@@ -12,7 +12,7 @@
                 </div>
                 <div class="col-3">
                     <section id="daily-goals" class="row white-box">
-                        <daily-goals/>
+                        <daily-goals :username="username"/>
                     </section>
                     <section class="row white-box"></section>
                 </div>
