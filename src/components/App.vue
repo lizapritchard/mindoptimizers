@@ -15,7 +15,7 @@
                         <daily-goals :username="username"/>
                     </section>
                     <section class="row white-box">
-                      <breathing-animation/>
+                      <breathing-module/>
                     </section>
                 </div>
             </div>
@@ -24,9 +24,9 @@
 </template>
 
 <script>
-  import BreathingAnimation from './BreathingAnimation.vue';
   import DailyGoals from './DailyGoals.vue'; 
-  import IntroModal from './IntroModal.vue'; 
+  import IntroModal from './IntroModal.vue';
+  import BreathingModule from './BreathingModule.vue' 
   export default {
     data () {
       return {
@@ -41,7 +41,7 @@
     components: {
       DailyGoals, 
       IntroModal,
-      BreathingAnimation
+      BreathingModule
     }, 
     name: 'app', 
   }

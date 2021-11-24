@@ -1,19 +1,22 @@
 <template>
-    <div class="outer-wrapper">
-        <div class="inner-wrapper">
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-        </div>
+    <div class="inner-wrapper" ref="inner-wrapper" :class="{animated : isAnimated}">
+        <div v-for="index in 6" :key="index" class="circle"></div>
     </div>
 </template>
 
 <script>
     export default {
-        name: "BreathingAnimation"
+        name: "BreathingAnimation",
+        data() {
+            return {
+                isAnimated: false
+            }
+        },
+        methods: {
+            startBreathingAnimation() {
+                this.isAnimated = true; 
+            }
+        }
     }
 </script>
 
@@ -26,6 +29,15 @@
         position: absolute;
         opacity: 0.6;
         transform: translate(0, 0);
+    }
+    .inner-wrapper {
+        height: 125px;
+        width: 125px;
+
+    }
+
+    .animated {
+        animation: pulse 4s cubic-bezier(0.5, 0, 0.5, 1) alternate infinite;
     }
 
     /* initial positions */
@@ -59,14 +71,68 @@
         background-color: #f5f258;
     }
 
-    .outer-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    /* BREATHING ANIMATION */
+    @keyframes pulse {
+    0% {
+        transform: scale(.15) rotate(180deg);
+    }
+    100% {
+        transform: scale(1);
+    }
     }
 
-    .inner-wrapper {
-        height: 125px;
-        width: 125px;
+    @keyframes circle-1 {
+    0% {
+        transform: translate(0, 0);
     }
+    100% {
+        transform: translate(-35px, -50px);
+    }
+    }
+
+    @keyframes circle-2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(35px, 50px);
+    }
+    }
+
+    @keyframes circle-3 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-60px, 0);
+    }
+    }
+
+    @keyframes circle-4 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(60px, 0);
+    }
+    }
+
+    @keyframes circle-5 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-35px, 50px);
+    }
+    }
+
+    @keyframes circle-6 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(35px, -50px);
+    }
+    }
+
 </style>
