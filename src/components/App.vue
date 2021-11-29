@@ -6,7 +6,10 @@
             <div class="row">
                 <section id="journal" class="col-5 white-box"></section>
                 <div class="col-3">
-                    <section class="row white-box"></section>
+                    <section id="quote" class="row white-box"> 
+                      <inspo-quote/>
+                      <div> <h2> <i> {{quote}} </i> <br> - {{author}} </h2> </div>
+                    </section>
                     <section class="row white-box"></section>
                     <section class="row white-box"></section>
                 </div>
@@ -24,22 +27,34 @@
 <script>
   import DailyGoals from './DailyGoals.vue'; 
   import IntroModal from './IntroModal.vue'; 
+  import InspoQuote from './InspoQuote.vue';
+
   export default {
     data () {
       return {
-        username: null
+        username: null,
+        quote: null,
+        author: null,
       }
     },
     methods: {
       setUsername(val) {
           this.username = val; 
+      },
+
+      setQuote(val) {
+        this.quote = val;
+      },
+
+      setAuthor(val) {
+        this.author = val;
       }
     }, 
     components: {
       DailyGoals, 
-      IntroModal
+      IntroModal,
+      InspoQuote
     }, 
-    name: 'app', 
   }
 </script>
 
