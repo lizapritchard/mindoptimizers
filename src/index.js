@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import App from './components/App.vue'
+import axios from 'axios'
+
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faMoon, faSun, faTint, faUserSecret } from '@fortawesome/free-solid-svg-icons'
@@ -13,6 +15,9 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
+
+//make axios available for API calls
+Vue.use(axios)
 
 
 // Font awesome stuff
