@@ -4,7 +4,9 @@
       <h1>Good Morning, {{username}}</h1>
         <div class="container-fluid">
             <div class="row">
-                <section id="journal" class="col-5 white-box"></section>
+                <section id="journal" class="col-5 white-box">
+                  <journal-entry/>
+                </section>
                 <div class="col-3">
                     <section id="quote" class="row white-box"> 
                       <inspo-quote/>
@@ -30,6 +32,7 @@
   import DailyGoals from './DailyGoals.vue'; 
   import IntroModal from './IntroModal.vue'; 
   import InspoQuote from './InspoQuote.vue';
+  import JournalEntry from './JournalEntry.vue';
   import Links from './Links.vue';
 
   export default {
@@ -57,6 +60,7 @@
       DailyGoals, 
       IntroModal,
       InspoQuote,
+      JournalEntry
       Links,
     }, 
   }
