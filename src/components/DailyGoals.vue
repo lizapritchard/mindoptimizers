@@ -10,40 +10,19 @@
                     <div>
                         <div> {{goal.title}}: </div>
                         <div>
-                            <input type="text" v-model="goal.target"/>
+                            <input type="text" v-model="goal.target" @input="validateValues()"/>
                             {{goal.units}}
                         </div>
                     </div>
                 </li>
             </ul>
             <template #modal-footer>
-                <b-button variant="primary" block @click="closeDailyGoalsModal()">Submit</b-button>
+                <div class="flex">
+                    <div id="error-msg">{{errorMsg}}</div>
+                    <b-button variant="primary" block @click="closeDailyGoalsModal()">Submit</b-button>
+                </div>
             </template>
         </b-modal>
-        <!-- <div ref="modal" id="intro-modal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Hi {{username}}! Let's set some self-care goals today!</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <ul>
-                            <li v-for="goal in goals" :key="goal.title">
-                                <i :class="goal.iconClass" class="fas"></i> 
-                                <div>
-                                    <div> {{goal.title}}: </div>
-                                    <div>
-                                        <input type="text" v-model="goal.target"/>
-                                        {{goal.units}}
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div> -->
         <div @click="openDailyGoalsModal()">
             <h2>Self Care Goals</h2>
             <ul>
@@ -65,6 +44,7 @@
     props: ["username"],
     data() {
         return {
+            errorMsg: "", 
             goals: [
                 {   
                     title: "Water Intake", 
@@ -97,6 +77,18 @@
         },
         closeDailyGoalsModal() {
             this.$refs['daily-goals-modal'].hide()
+        },
+        validateValues() {
+            let errorMsg = ""
+            this.goals.forEach(goal => {
+                if (Number(goal.target) < 0) {
+                    errorMsg = "Please set a positive goal.";
+                }
+                else if (isNaN(goal.target)) {
+                    errorMsg = "Please use a number for your goals.";
+                }
+            });
+            this.errorMsg = errorMsg
         }
     }, 
     name: 'DailyGoals', 
@@ -138,5 +130,13 @@
         font-weight: 700;
         color: rgb(3, 138, 192);
         text-decoration: none;
+    }
+    .flex {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    #error-msg {
+        color: red;
     }
 </style>
