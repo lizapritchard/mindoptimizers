@@ -4,26 +4,29 @@
       <h1>Good Morning, {{username}}</h1>
         <div class="container-fluid">
             <div class="row">
-                <section id="journal" class="col-5 white-box">
+                <section id="journal" class="col-4 white-box">
                   <journal-entry/>
                 </section>
-                <div class="col-3">
-                    <section id="quote" class="row white-box"> 
-                      <inspo-quote/>
-                      <div> <h2> <i> {{quote}} </i> <br> - {{author}} </h2> </div>
-                    </section>
-                    <section id="links" class="row white-box">
-                      <links/>
-                    </section>
-                    <section class="row white-box"></section>
-                </div>
-                <div class="col-3">
-                    <section id="daily-goals" class="row white-box">
-                        <daily-goals :username="username"/>
-                    </section>
-                    <section class="row white-box">
-                      <breathing-module/>
-                    </section>
+                <div class="col-7">
+                  <div class="row">
+                      <div class="col-7">
+                        <section id="quote" class="row white-box"> 
+                          <inspo-quote/>
+                          <div> <h2> <i> {{quote}} </i> <br> - {{author}} </h2> </div>
+                        </section>
+                        <section id="links" class="row white-box">
+                          <links/>
+                        </section>
+                    </div>
+                    <div class="col-5">
+                        <section id="daily-goals" class="row white-box">
+                            <daily-goals :username="username"/>
+                        </section>
+                        <section class="row white-box">
+                          <breathing-module/>
+                        </section>
+                    </div>
+                  </div>
                 </div>
             </div>
           </div>
@@ -87,6 +90,9 @@
       list-style: none;
       margin: 0;
       padding: 0;
+  }
+  #journal {
+    height: 42rem;
   }
 </style>
 
