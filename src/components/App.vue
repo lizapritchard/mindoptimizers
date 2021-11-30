@@ -10,7 +10,9 @@
                       <inspo-quote/>
                       <div> <h2> <i> {{quote}} </i> <br> - {{author}} </h2> </div>
                     </section>
-                    <section class="row white-box"></section>
+                    <section id="links" class="row white-box">
+                      <links/>
+                    </section>
                     <section class="row white-box"></section>
                 </div>
                 <div class="col-3">
@@ -28,6 +30,7 @@
   import DailyGoals from './DailyGoals.vue'; 
   import IntroModal from './IntroModal.vue'; 
   import InspoQuote from './InspoQuote.vue';
+  import Links from './Links.vue';
 
   export default {
     data () {
@@ -53,7 +56,8 @@
     components: {
       DailyGoals, 
       IntroModal,
-      InspoQuote
+      InspoQuote,
+      Links,
     }, 
   }
 </script>
