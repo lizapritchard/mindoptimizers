@@ -60,7 +60,7 @@
       DailyGoals, 
       IntroModal,
       InspoQuote,
-      JournalEntry
+      JournalEntry,
       Links,
     }, 
   }
