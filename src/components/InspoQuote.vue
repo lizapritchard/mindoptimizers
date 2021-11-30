@@ -1,29 +1,30 @@
-
 <template>
-    <div> 
+  <div class="flex"> 
+    <div>
+      <h2><i> {{quote}} </i></h2>
+      <h2 class="author">- {{author}}</h2>
     </div>
+  </div>
 </template>
-
 <script>
   import axios from 'axios';
     
   export default {
     el: '#app',
-
     mounted: function(){
         this.getQuote() //method1 will execute at pageload
         console.log("getQuote on page load");
         console.log("here is the quote after page load: ");
         console.log(this.quote);
     },
-
-    data: {
+    data() {
+      return {
         //   token: '07c2bf361b2c688675ecf32141cdc1f9d4c857c4',
           quote: 'this is the quote',
           author: 'this is the author',
         //   data: null,
+      }
     },
-
     methods: {
         getQuote: function() {
               console.log("getting quote of the day...");
@@ -49,3 +50,13 @@
 
   }
 </script>
+<style scoped>
+  .author {
+    text-align: right;
+    padding-right: 1rem;
+  }
+  .flex {
+    display: flex;
+    align-items: center;
+  }
+</style>

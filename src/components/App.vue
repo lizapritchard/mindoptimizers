@@ -12,7 +12,6 @@
                       <div class="col-7">
                         <section id="quote" class="row white-box"> 
                           <inspo-quote/>
-                          <div> <h2> <i> {{quote}} </i> <br> - {{author}} </h2> </div>
                         </section>
                         <section id="links" class="row white-box">
                           <links/>
