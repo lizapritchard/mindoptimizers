@@ -3,15 +3,12 @@
     <div class = "prompt">
         {{prompt}}
     </div>
-    <div>
         <b-form-textarea
-        id="textarea"
-        v-model="text"
-        placeholder="Today I..."
-        rows="8"
-        max-rows="40"
-        ></b-form-textarea>
-  </div>
+          id="textarea"
+          v-model="text"
+          placeholder="Today I..."
+          rows="20"
+        />
 </div>
   
 </template>
@@ -42,13 +39,14 @@
 
 </script>
 <style scoped>
+
     .prompt {
         font-size: 1.5rem;
         color: black;
         padding-bottom: 10px;
     }
     .casing {
-        padding-top: 20px;
+        padding: 20px;
         color: #2596be;
     }
 </style>
