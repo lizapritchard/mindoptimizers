@@ -12,7 +12,9 @@
                       <inspo-quote/>
                       <div> <h2> <i> {{quote}} </i> <br> - {{author}} </h2> </div>
                     </section>
-                    <section class="row white-box"></section>
+                    <section id="links" class="row white-box">
+                      <links/>
+                    </section>
                     <section class="row white-box"></section>
                 </div>
                 <div class="col-3">
@@ -31,6 +33,7 @@
   import IntroModal from './IntroModal.vue'; 
   import InspoQuote from './InspoQuote.vue';
   import JournalEntry from './JournalEntry.vue';
+  import Links from './Links.vue';
 
   export default {
     data () {
@@ -58,6 +61,7 @@
       IntroModal,
       InspoQuote,
       JournalEntry
+      Links,
     }, 
   }
 </script>
