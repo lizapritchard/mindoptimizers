@@ -1,5 +1,5 @@
 <template>
-    <b-modal ref="breathing-modal" id="breathing-modal" hide-footer>
+    <b-modal ref="breathing-modal" id="breathing-modal" hide-footer title="Click the flower and take a deep breath">
         <div class="outer-wrapper" @click="startBreathingAnimation()">
             <breathing-animation ref="breathing-animation"/>
         </div>
