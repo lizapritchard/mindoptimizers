@@ -21,7 +21,9 @@
                     <section id="daily-goals" class="row white-box">
                         <daily-goals :username="username"/>
                     </section>
-                    <section class="row white-box"></section>
+                    <section class="row white-box">
+                      <breathing-module/>
+                    </section>
                 </div>
             </div>
           </div>
@@ -34,7 +36,8 @@
   import InspoQuote from './InspoQuote.vue';
   import JournalEntry from './JournalEntry.vue';
   import Links from './Links.vue';
-
+  import BreathingModule from './BreathingModule.vue';
+  
   export default {
     data () {
       return {
@@ -62,6 +65,7 @@
       InspoQuote,
       JournalEntry,
       Links,
+      BreathingModule
     }, 
   }
 </script>
