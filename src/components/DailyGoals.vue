@@ -23,18 +23,24 @@
                 </div>
             </template>
         </b-modal>
-        <div @click="openDailyGoalsModal()">
+        <div>
             <h2>Self Care Goals</h2>
             <ul>
                 <li v-for="goal in goals" :key="goal.title">
                     <font-awesome-icon :icon="goal.icon" class="daily-goals-icon" :class="goal.iconClass"/>
-                    <div>
-                        <div> {{goal.title}}: </div>
-                        <div v-if="goal.target != null">{{goal.target}} {{goal.units}} </div>
-                        <a v-else class="link-highlight">Set your {{goal.title}} goal!</a>
+                    <div class="flex">
+                        <div>
+                            <div> {{goal.title}}: </div>
+                            <div v-if="goal.target != null">{{goal.target}} {{goal.units}} </div>
+                            <a v-else class="link-highlight" @click="openDailyGoalsModal()">Set your {{goal.title}} goal!</a>
+                        </div>
+                        <input v-show="goal.target" type="checkbox" class="goals-check"/>
                     </div>
                 </li>
             </ul>
+            <div class="right-align">
+                <button @click="openDailyGoalsModal()" class="btn btn-primary">Edit Goals</button>
+            </div>
         </div>
     </div>
 </template>
@@ -135,8 +141,20 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     #error-msg {
         color: red;
+    }
+
+    .goals-check {
+        margin-right: 2rem;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .right-align {
+        display: flex;
+        justify-content: flex-end;
     }
 </style>
