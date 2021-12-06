@@ -11,18 +11,18 @@
                   <div class="row">
                       <div class="col-7">
                         <section id="quote" class="row white-box"> 
-                          <inspo-quote/>
+                          <daily-goals :username="username"/>
                         </section>
                         <section id="links" class="row white-box">
-                          <links/>
+                          <inspo-quote/>
                         </section>
                     </div>
                     <div class="col-5">
                         <section id="daily-goals" class="row white-box">
-                            <daily-goals :username="username"/>
+                          <breathing-module/>
                         </section>
                         <section class="row white-box">
-                          <breathing-module/>
+                          <links/>
                         </section>
                     </div>
                   </div>

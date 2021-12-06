@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="daily-goals">
         <b-modal ref="daily-goals-modal" id="daily-goals-modal">
             <template #modal-title>
                 <h5 class="modal-title">Hi {{username}}! Let's set some self-care goals today!</h5>
@@ -102,7 +102,12 @@
 </script>
 
 <style scoped>
-    /* TODO: figure out a better way to line these up  */
+    .daily-goals {
+        font-size: 1.2rem;
+    }
+    h2 {
+        margin: 1rem;
+    }
     .water-icon {
         padding-left: 5px;
         color: #2AAAE1;
