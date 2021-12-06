@@ -4,6 +4,7 @@
         <div class="outer-wrapper">
             <breathing-animation/>
         </div>
+        <div id="subtext"> Click the flower and take a deep breath </div>
     </div>
 </template>
 
@@ -30,6 +31,10 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: 100%;
+        height: 80%;
+    }
+    #subtext {
+        font-size: 1.1em;
+        text-align: center;
     }
 </style>
